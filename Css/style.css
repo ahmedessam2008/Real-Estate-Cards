@@ -1,0 +1,187 @@
+/* For Global Style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --pColor: #9d9797;
+  --cleanColor: #fff;
+}
+body {
+  font-family: sans-serif;
+}
+img {
+  width: 100%;
+  height: 220px;
+}
+.bottom {
+  padding: 20px;
+  width: 100%;
+}
+h3,
+h5 {
+  margin-bottom: 15px;
+  color: #515050;
+}
+p {
+  font-size: 13px;
+  color: var(--pColor);
+  margin-bottom: 20px;
+}
+/* ============================ */
+.container {
+  width: 80%;
+  margin: 10px auto;
+  padding: 28px;
+  border: 1px solid #444;
+  background-color: #f7f7f7;
+}
+.plans {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+.plans .one,
+.plans .two,
+.plans .three {
+  background-color: var(--cleanColor);
+}
+.top {
+  position: relative;
+  width: 100%;
+}
+.top .ex-rig {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 25px;
+  z-index: 999;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(127, 255, 212, 0.589);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay p {
+  color: var(--cleanColor);
+  border: 1px solid var(--cleanColor);
+  padding: 10px;
+  cursor: pointer;
+}
+.one {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.one .feature {
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  background-color: #ea723d;
+  padding: 6px;
+  height: 30px;
+  z-index: 999;
+  color: var(--cleanColor);
+}
+.one::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 75px;
+  width: 0px;
+  height: 0px;
+  border-color: transparent transparent transparent #ea723d;
+  border-width: 15px;
+  border-style: solid;
+}
+.one .top::before,
+.two .top::before {
+  content: "Hot";
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  padding: 6px;
+  bottom: 22px;
+  left: 10px;
+  background-color: #d33;
+  color: var(--cleanColor);
+  z-index: 999;
+}
+
+.bottom > div {
+  width: 33%;
+  float: left;
+  margin-bottom: 16px;
+}
+.bottom h5 {
+  margin-bottom: 4px;
+}
+.bottom span {
+  color: var(--pColor);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.bottom .bed span::before,
+.bottom .bath span::before,
+.bottom .area span::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  top: 0px;
+  left: 0px;
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+}
+.bottom .bed span::before {
+  background: url("https://api.iconify.design/fluent:bed-24-filled.svg?color=%23b3b3b3")
+    no-repeat center center / contain;
+}
+.bottom .bath span::before {
+  background: url("https://api.iconify.design/icon-park-outline:shower-head.svg?color=%23b3b3b3")
+    no-repeat center center / contain;
+}
+.bottom .area span::before {
+  background: url("https://api.iconify.design/carbon:area.svg?color=%23b3b3b3")
+    no-repeat center center / contain;
+}
+.bottom > span {
+  color: #46a6a4;
+  font-weight: bold;
+  font-size: 20px;
+}
+.bottom > span::before {
+  background: url("https://api.iconify.design/carbon:currency-dollar.svg?color=%2346a6a4")
+    no-repeat center center / contain;
+  content: "";
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  top: 0px;
+  left: 0px;
+  width: 1em;
+  height: 1em;
+  margin-right: -3px;
+  margin-left: -7px;
+}
